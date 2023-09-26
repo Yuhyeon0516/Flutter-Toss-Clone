@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:toss/common/common.dart';
 import 'package:toss/common/widget/w_big_button.dart';
+import 'package:toss/common/widget/w_rounded_container.dart';
 import 'package:toss/screen/dialog/d_message.dart';
+import 'package:toss/screen/main/tab/home/bank_accounts_dummy.dart';
+import 'package:toss/screen/main/tab/home/w_bank_account.dart';
 import 'package:toss/screen/main/tab/home/w_toss_app_bar.dart';
 
 import '../../../dialog/d_color_bottom.dart';
@@ -27,7 +30,21 @@ class HomeFragment extends StatelessWidget {
                   onTap: () {
                     context.showSnackbar("토스뱅크를 눌렀습니다.");
                   },
-                )
+                ),
+                height10,
+                RoundedContainer(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      "자산".text.size(20).bold.white.make(),
+                      height10,
+                      ...bankAccounts
+                          .map((bankAccount) => BankAccountWidget(bankAccount))
+                          .toList()
+                    ],
+                  ),
+                ),
+                const Height(80),
               ],
             ).pSymmetric(h: 10),
           ),

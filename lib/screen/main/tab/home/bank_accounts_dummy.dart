@@ -12,8 +12,15 @@ final bankAccountKakao = BankAccount(bankKakao, 2000000);
 
 final bankAccounts = [
   bankAccountShinhan1,
+  bankAccountToss,
   bankAccountShinhan2,
+  bankAccountKakao,
   bankAccountShinhan3,
   bankAccountToss,
+  bankAccountShinhan1,
+  bankAccountKakao,
+  bankAccountShinhan2,
+  bankAccountToss,
+  bankAccountShinhan3,
   bankAccountKakao,
 ];
