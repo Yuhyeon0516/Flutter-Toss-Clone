@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toss/common/common.dart';
+import 'package:toss/common/widget/w_big_button.dart';
 import 'package:toss/screen/dialog/d_message.dart';
 import 'package:toss/screen/main/tab/home/w_toss_app_bar.dart';
 
@@ -14,15 +15,23 @@ class HomeFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
-      child: const Stack(
+      color: context.appColors.appBarBackground,
+      child: Stack(
         children: [
           SingleChildScrollView(
+            padding: const EdgeInsets.only(top: 60),
             child: Column(
-              children: [],
-            ),
+              children: [
+                BigButton(
+                  "토스뱅크",
+                  onTap: () {
+                    context.showSnackbar("토스뱅크를 눌렀습니다.");
+                  },
+                )
+              ],
+            ).pSymmetric(h: 10),
           ),
-          TossAppBar()
+          const TossAppBar()
         ],
       ),
     );
