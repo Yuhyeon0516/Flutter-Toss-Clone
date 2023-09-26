@@ -107,6 +107,4 @@ class _StockFragmentState extends State<StockFragment>
           const Line(),
         ],
       );
-  Widget get myAccount => const Placeholder();
-  Widget get myStocks => const Placeholder();
 }
