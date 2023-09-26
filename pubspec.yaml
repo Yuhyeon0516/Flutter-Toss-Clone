@@ -114,6 +114,7 @@ flutter:
         - assets/images/icon/
         - assets/images/flag/
         - assets/images/darkmode/
+        - assets/images/notification/
         - assets/translations/
         - assets/
     #   - images/a_dot_ham.jpeg
