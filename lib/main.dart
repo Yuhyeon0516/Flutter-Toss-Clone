@@ -3,12 +3,15 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:toss/app.dart';
 import 'package:toss/common/common.dart';
 import 'package:toss/common/data/preference/app_preferences.dart';
+import 'package:toss/common/data/preference/prefs.dart';
+import 'package:toss/common/theme/custom_theme.dart';
 
 void main() async {
   final binding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: binding);
   await EasyLocalization.ensureInitialized();
   await AppPreferences.init();
+  await Prefs.appTheme.set(CustomTheme.dark);
 
   runApp(EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ko')],
