@@ -107,6 +107,10 @@ flutter:
         - assets/images/splash/
         - assets/json/
         - assets/images/
+        - assets/images/bank/
+        - assets/images/benefit/
+        - assets/images/credit_card/
+        - assets/images/stock/
         - assets/images/icon/
         - assets/images/flag/
         - assets/images/darkmode/
