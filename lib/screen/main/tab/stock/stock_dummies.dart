@@ -16,8 +16,8 @@ List<Stock> myInterestStocks = [
     stockImagePath: '$basePath/stock/interest_stock_02.png',
   ),
   Stock(
-    yesterdayClosePrice: 139300,
-    currentPrice: 136600,
+    yesterdayClosePrice: 136600,
+    currentPrice: 139300,
     stockName: '셀트리온',
     stockImagePath: '$basePath/stock/interest_stock_03.png',
   ),
@@ -28,8 +28,8 @@ List<Stock> myInterestStocks = [
     stockImagePath: '$basePath/stock/interest_stock_04.png',
   ),
   Stock(
-    yesterdayClosePrice: 13540,
-    currentPrice: 13320,
+    yesterdayClosePrice: 13320,
+    currentPrice: 14000,
     stockName: 'LG디스플레이',
     stockImagePath: '$basePath/stock/interest_stock_05.png',
   ),
@@ -46,8 +46,8 @@ List<Stock> myInterestStocks = [
     stockImagePath: '$basePath/stock/interest_stock_07.png',
   ),
   Stock(
-    yesterdayClosePrice: 69400,
-    currentPrice: 68600,
+    yesterdayClosePrice: 67600,
+    currentPrice: 72000,
     stockName: '삼성전자',
     stockImagePath: '$basePath/stock/interest_stock_08.png',
   ),
