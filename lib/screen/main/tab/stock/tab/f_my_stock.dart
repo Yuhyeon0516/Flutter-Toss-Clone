@@ -13,6 +13,7 @@ class MyStockFragment extends StatelessWidget {
       children: [
         myAccount(context),
         height20,
+        myStocks(context),
       ],
     );
   }
@@ -47,6 +48,43 @@ class MyStockFragment extends StatelessWidget {
             height10,
             const LongButton('주문내역'),
             const LongButton('판매수익'),
+          ],
+        ),
+      );
+
+  Widget myStocks(BuildContext context) => Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        color: context.appColors.roundedLayoutBackground,
+        child: Column(
+          children: [
+            height30,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                '관심주식'.text.size(18).bold.make(),
+                '편집하기'.text.color(context.appColors.lessImportant).make(),
+              ],
+            ),
+            height20,
+            Tap(
+              onTap: () {
+                context.showSnackbar('기본');
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    '기본'.text.size(18).make(),
+                    Arrow(
+                      direction: AxisDirection.up,
+                      size: 20,
+                      color: context.appColors.lessImportant,
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       );
