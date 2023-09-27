@@ -34,4 +34,12 @@ class SearchStockData extends GetxController {
     searchResult.value =
         stocks.where((element) => element.stockName.contains(text)).toList();
   }
+
+  void addHistory(SimpleStock stock) {
+    searchHistoryList.add(stock.stockName);
+  }
+
+  void removeHistory(String stockName) {
+    searchHistoryList.remove(stockName);
+  }
 }

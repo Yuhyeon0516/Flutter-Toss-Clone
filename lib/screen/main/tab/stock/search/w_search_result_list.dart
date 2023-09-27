@@ -11,10 +11,13 @@ class SearchResultList extends StatelessWidget with SearchStockDataProvider {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        final stockName = searchData.searchResult[index].stockName;
+        final stock = searchData.searchResult[index];
+        final stockName = stock.stockName;
+
         return Tap(
             onTap: () {
               controller.clear();
+              searchData.addHistory(stock);
               Nav.push(StockDetailScreen(
                 stockName: stockName,
               ));
