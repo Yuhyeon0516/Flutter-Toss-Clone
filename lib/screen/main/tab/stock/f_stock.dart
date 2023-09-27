@@ -101,7 +101,7 @@ class _StockFragmentState extends State<StockFragment>
             labelPadding: const EdgeInsets.symmetric(vertical: 20),
             indicatorPadding: const EdgeInsets.symmetric(horizontal: -20),
             indicatorColor: Colors.white,
-            tabs: ["내 주식".text.make(), "오늘의 발견".text.make()],
+            tabs: ["내 주식".text.white.make(), "오늘의 발견".text.white.make()],
             controller: tabController,
           ),
           const Line(),
