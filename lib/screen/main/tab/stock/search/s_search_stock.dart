@@ -3,14 +3,14 @@ import 'package:toss/screen/main/tab/stock/search/w_popular_search_stock_list.da
 import 'package:toss/screen/main/tab/stock/search/w_search_history_stock_list.dart';
 import 'package:toss/screen/main/tab/stock/search/w_stock_search_app_bar.dart';
 
-class SearchStockFragment extends StatefulWidget {
-  const SearchStockFragment({super.key});
+class SearchStockScreen extends StatefulWidget {
+  const SearchStockScreen({super.key});
 
   @override
-  State<SearchStockFragment> createState() => _SearchStockFragmentState();
+  State<SearchStockScreen> createState() => _SearchStockFragmentState();
 }
 
-class _SearchStockFragmentState extends State<SearchStockFragment> {
+class _SearchStockFragmentState extends State<SearchStockScreen> {
   final controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
