@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:toss/common/cli_common.dart';
 import 'package:toss/common/common.dart';
 import 'package:toss/common/widget/w_big_button.dart';
 import 'package:toss/common/widget/w_rounded_container.dart';
@@ -56,7 +55,7 @@ class HomeFragment extends StatelessWidget {
                     ),
                   ),
                 ],
-              ).pSymmetric(h: 10),
+              ).pSymmetric(h: 10).animate().slideY(duration: 1000.ms).fadeIn(),
             ),
           ),
           const TossAppBar()

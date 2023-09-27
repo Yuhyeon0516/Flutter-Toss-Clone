@@ -1,7 +1,6 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:toss/common/cli_common.dart';
 import 'package:toss/screen/main/tab/tab_item.dart';
 import 'package:toss/screen/main/tab/tab_navigator.dart';
 
