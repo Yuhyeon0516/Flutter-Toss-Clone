@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:toss/screen/main/tab/stock/search/w_popular_search_stock_list.dart';
+import 'package:toss/screen/main/tab/stock/search/w_search_history_stock_list.dart';
 import 'package:toss/screen/main/tab/stock/search/w_stock_search_app_bar.dart';
 
 class SearchStockFragment extends StatefulWidget {
@@ -15,6 +17,12 @@ class _SearchStockFragmentState extends State<SearchStockFragment> {
     return Scaffold(
       appBar: StockSearchAppBar(
         controller: controller,
+      ),
+      body: ListView(
+        children: const [
+          SearchHistoryStockList(),
+          PopularSearchStockList(),
+        ],
       ),
     );
   }
