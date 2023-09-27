@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toss/common/common.dart';
 import 'package:toss/common/widget/w_icon_button.dart';
 import 'package:toss/screen/main/tab/stock/search/s_search_stock.dart';
+import 'package:toss/screen/main/tab/stock/setting/s_setting.dart';
 import 'package:toss/screen/main/tab/stock/tab/f_my_stock.dart';
 import 'package:toss/screen/main/tab/stock/tab/f_todays_discovery.dart';
 
@@ -45,7 +46,7 @@ class _StockFragmentState extends State<StockFragment>
               IconsButton(
                 icon: Icons.settings,
                 onTap: () {
-                  context.showSnackbar("설정");
+                  Nav.push(const SettingScreen());
                 },
               ),
             ],
