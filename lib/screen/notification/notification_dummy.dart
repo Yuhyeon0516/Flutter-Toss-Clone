@@ -1,4 +1,4 @@
-import 'package:toss/common/dart/extension/num_duration_extension.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:toss/screen/notification/vo/notification_type.dart';
 import 'package:toss/screen/notification/vo/vo_notification.dart';
 
