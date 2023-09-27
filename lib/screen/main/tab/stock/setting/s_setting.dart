@@ -6,6 +6,7 @@ import 'package:toss/common/data/preference/prefs.dart';
 import 'package:toss/common/widget/w_big_button.dart';
 import 'package:toss/screen/main/tab/stock/setting/d_number.dart';
 import 'package:toss/screen/main/tab/stock/setting/w_switch_menu.dart';
+import 'package:toss/screen/opensource/s_opensource.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -60,6 +61,7 @@ class _SettingScreenState extends State<SettingScreen> {
               },
             ),
           ),
+          height10,
           Obx(
             () => BigButton(
               "저장 된 숫자 ${Prefs.number.get()}",
@@ -71,6 +73,13 @@ class _SettingScreenState extends State<SettingScreen> {
                 }
               },
             ),
+          ),
+          height10,
+          BigButton(
+            "오픈소스",
+            onTap: () async {
+              Nav.push(const OpensourceScreen());
+            },
           )
         ],
       ),
