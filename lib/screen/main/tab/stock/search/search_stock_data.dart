@@ -2,10 +2,16 @@ import 'package:get/get.dart';
 import 'package:toss/common/util/local_json.dart';
 import 'package:toss/screen/main/tab/stock/vo_simple_stock.dart';
 
+import '../../../../../common/common.dart';
+
+abstract mixin class SearchStockDataProvider {
+  late final searchData = Get.find<SearchStockData>();
+}
+
 class SearchStockData extends GetxController {
   List<SimpleStock> stocks = [];
   RxList<String> searchHistoryList = <String>[].obs;
-  RxList<SimpleStock> autoCompleteList = <SimpleStock>[].obs;
+  RxList<SimpleStock> searchResult = <SimpleStock>[].obs;
 
   @override
   void onInit() {
@@ -16,7 +22,16 @@ class SearchStockData extends GetxController {
 
   Future<void> loadLocalStockJson() async {
     final jsonList =
-        await LocalJson.getObjectList<SimpleStock>("stock_list.json");
+        await LocalJson.getObjectList<SimpleStock>("json/stock_list.json");
     stocks.addAll(jsonList);
+  }
+
+  void search(String text) {
+    if (isBlank(text)) {
+      searchResult.clear();
+      return;
+    }
+    searchResult.value =
+        stocks.where((element) => element.stockName.contains(text)).toList();
   }
 }
